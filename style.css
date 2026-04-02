@@ -1,0 +1,186 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Links & Buttons (shared behavior) */
+a {
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+    background: #111;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1db954;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #1db954, #191414);
+    color: white;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero button {
+    margin-top: 1rem;
+    background: white;
+    color: #111;
+}
+
+#hero button:hover {
+    background: #ddd;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* =========================
+   CARDS (Profiles & Jobs)
+========================= */
+.profile-card,
+.job-card {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease;
+}
+
+.profile-card:hover,
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card h3,
+.job-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   CALL TO ACTION (CTA)
+========================= */
+#cta {
+    text-align: center;
+    background: #111;
+    color: white;
+    border-radius: 8px;
+    padding: 3rem 2rem;
+}
+
+#cta button {
+    margin-top: 1rem;
+    background: #1db954;
+    color: white;
+}
+
+#cta button:hover {
+    background: #17a44a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
