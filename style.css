@@ -65,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #1db954;
+    color: #1b8bb8;
 }
 
 /* =========================
@@ -74,7 +74,7 @@ nav a:hover {
 #hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(to right, #1db954, #191414);
+    background: linear-gradient(to right, #1b8bb8, #191414);
     color: white;
 }
 
@@ -143,12 +143,12 @@ section h2 {
 
 #cta button {
     margin-top: 1rem;
-    background: #1db954;
+    background: #1b8bb8;
     color: white;
 }
 
 #cta button:hover {
-    background: #17a44a;
+    background: #1b8bb8;
 }
 
 /* =========================
