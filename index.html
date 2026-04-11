@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StageLink | Music Industry Networking</title>
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -45,7 +46,7 @@
 </section>
 
 <!-- =========================
-     FILTERABLE PROFILES SECTION
+     PROFILES + FILTER SYSTEM
 ========================= -->
 <section id="profiles">
 
@@ -57,9 +58,12 @@
         <button onclick="filterItems('tour')">Tour Managers</button>
         <button onclick="filterItems('audio')">Audio Engineers</button>
         <button onclick="filterItems('artist')">Artists</button>
+        <button onclick="filterItems('venue')">Venues</button>
+        <button onclick="filterItems('lighting')">Lighting Techs</button>
+        <button onclick="filterItems('label')">Record Labels</button>
     </div>
 
-    <!-- OPTIONAL SEARCH -->
+    <!-- SEARCH -->
     <input
         type="text"
         placeholder="Search professionals..."
@@ -69,19 +73,25 @@
     <!-- PROFILES -->
     <div class="item-list">
 
-        <div class="item profile-card" data-category="tour">
+        <div class="item profile-card"
+             data-category="tour"
+             onclick="openProfile('alex')">
             <h3>Alex Rivera</h3>
             <p>Tour Manager</p>
             <p>5+ years managing national indie tours</p>
         </div>
 
-        <div class="item profile-card" data-category="audio">
+        <div class="item profile-card"
+             data-category="audio"
+             onclick="openProfile('jordan')">
             <h3>Jordan Lee</h3>
             <p>Audio Engineer</p>
             <p>Specializes in live sound and festivals</p>
         </div>
 
-        <div class="item profile-card" data-category="artist">
+        <div class="item profile-card"
+             data-category="artist"
+             onclick="openProfile('luna')">
             <h3>Luna Vex</h3>
             <p>Indie Artist</p>
             <p>Electronic / Alternative performer</p>
@@ -120,6 +130,14 @@
     <p>© 2026 StageLink</p>
     <p>Contact: info@stagelink.com</p>
 </footer>
+
+<!-- PROFILE MODAL -->
+<div id="profileModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeProfile()">×</span>
+        <div id="profileDetails"></div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -1,25 +1,42 @@
+let activeCategory = "all";
+let activeSearch = "";
+
+/* =========================
+   FILTER BY CATEGORY
+========================= */
 function filterItems(category) {
+    activeCategory = category;
+    applyFilters();
+}
+
+/* =========================
+   SEARCH FUNCTION
+========================= */
+function searchItems(query) {
+    activeSearch = query.toLowerCase();
+    applyFilters();
+}
+
+/* =========================
+   MASTER FILTER ENGINE
+========================= */
+function applyFilters() {
     const items = document.querySelectorAll(".item");
 
     items.forEach(item => {
-        const match = item.getAttribute("data-category");
+        const category = item.getAttribute("data-category");
+        const text = item.innerText.toLowerCase();
 
-        if (category === "all" || match === category) {
+        const matchesCategory =
+            activeCategory === "all" || category === activeCategory;
+
+        const matchesSearch =
+            text.includes(activeSearch);
+
+        if (matchesCategory && matchesSearch) {
             item.style.display = "block";
         } else {
             item.style.display = "none";
         }
-    });
-}
-
-function searchItems(query) {
-    const items = document.querySelectorAll(".item");
-
-    query = query.toLowerCase();
-
-    items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-
-        item.style.display = text.includes(query) ? "block" : "none";
     });
 }
