@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
 
   const form = document.getElementById("resumeForm");
   const output = document.getElementById("resumeOutput");
