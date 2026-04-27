@@ -29,6 +29,9 @@
 
     <form id="resumeForm">
 
+        <!-- =========================
+             BASIC INFORMATION
+        ========================== -->
         <h3>Basic Information</h3>
 
         <label>Full Name</label>
@@ -43,6 +46,9 @@
         <label>Location (City, State)</label>
         <input type="text" id="location">
 
+        <!-- =========================
+             PROFESSIONAL DETAILS
+        ========================== -->
         <h3>Professional Details</h3>
 
         <label>Primary Role</label>
@@ -72,7 +78,6 @@
             <option>Latin</option>
             <option>Pop</option>
             <option>All Genres</option>
-                
         </select>
 
         <label>Work Availability</label>
@@ -83,13 +88,16 @@
             <option>Touring</option>
         </select>
 
+        <!-- =========================
+             SKILLS & EXPERIENCE
+        ========================== -->
         <h3>Experience & Skills</h3>
 
-        <label>Summary</label>
+        <label>Professional Summary</label>
         <textarea id="summary" placeholder="Short professional summary..."></textarea>
 
-        <label>Skills (comma separated)</label>
-        <input type="text" id="skills" placeholder="e.g. Live sound, stage cues, lighting boards">
+        <label>Technical Skills</label>
+        <input type="text" id="skills" placeholder="Live sound, cue calling, lighting boards">
 
         <label>Previous Experience</label>
         <textarea id="experience" placeholder="List past productions, venues, or tours..."></textarea>
@@ -97,7 +105,21 @@
         <label>Education / Training</label>
         <textarea id="education"></textarea>
 
+        <!-- =========================
+             RESUME UPLOAD
+        ========================== -->
+        <h3>Upload Existing Resume</h3>
+
+        <label>Upload Resume (PDF, DOC, DOCX)</label>
+        <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+
+        <p id="fileNamePreview" style="margin-top:8px; font-size:14px; color:#666;"></p>
+
+        <!-- =========================
+             SUBMIT
+        ========================== -->
         <button type="submit">Generate Profile</button>
+
     </form>
 
     <div id="resumeOutput"></div>
