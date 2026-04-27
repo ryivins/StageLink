@@ -1,64 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StageLink | Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="resumeBuilder">
+    <h2>Create Your Professional Profile</h2>
+    <p>Build your StageLink resume (Inspired by industry job boards)</p>
 
-<header>
-    <nav>
-        <h1>StageLink</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#jobs">Jobs</a></li>
-        </ul>
-    </nav>
-</header>
+    <form id="resumeForm">
 
-<main>
+        <h3>Basic Information</h3>
 
-    <section id="resumeBuilder">
-        <h2>Create Your StageLink Profile</h2>
-        <p>Build your professional music industry resume.</p>
+        <label>Full Name</label>
+        <input type="text" id="name" required>
 
-        <form id="resumeForm">
+        <label>Email</label>
+        <input type="email" id="email" required>
 
-            <label>Full Name</label>
-            <input type="text" id="name" required>
+        <label>Phone Number</label>
+        <input type="tel" id="phone">
 
-            <label>Primary Role</label>
-            <select id="role" required>
-                <option value="">Select Role</option>
-                <option value="Stage Manager">Stage Manager</option>
-                <option value="Audio Engineer">Audio Engineer</option>
-                <option value="Lighting Designer">Lighting Designer</option>
-                <option value="Performer">Performer</option>
-            </select>
+        <label>Location (City, State)</label>
+        <input type="text" id="location">
 
-            <label>Genre</label>
-            <select id="genre" required>
-                <option value="">Select Genre</option>
-                <option value="Musical">Musical</option>
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
-            </select>
+        <h3>Professional Details</h3>
 
-            <label>Experience</label>
-            <textarea id="experience" required></textarea>
+        <label>Primary Role</label>
+        <select id="role" required>
+            <option value="">Select Role</option>
+            <option>Stage Manager</option>
+            <option>Audio Engineer</option>
+            <option>Lighting Designer</option>
+            <option>Performer</option>
+            <option>Tour Manager</option>
+            <option>Producer</option>
+        </select>
 
-            <button type="submit">Generate Profile</button>
+        <label>Years of Experience</label>
+        <input type="number" id="experienceYears" min="0">
 
-        </form>
+        <label>Industry Focus (Genre)</label>
+        <select id="genre" required>
+            <option value="">Select Genre</option>
+            <option>Musical</option>
+            <option>Drama</option>
+            <option>Comedy</option>
+            <option>Rock</option>
+            <option>Pop</option>
+            <option>EDM</option>
+        </select>
 
-        <div id="resumeOutput"></div>
-    </section>
+        <label>Work Availability</label>
+        <select id="availability">
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Freelance</option>
+            <option>Touring</option>
+        </select>
 
-</main>
+        <h3>Experience & Skills</h3>
 
-<script src="resume.js"></script>
+        <label>Summary</label>
+        <textarea id="summary" placeholder="Short professional summary..."></textarea>
 
-</body>
-</html>
+        <label>Skills (comma separated)</label>
+        <input type="text" id="skills" placeholder="e.g. Live sound, stage cues, lighting boards">
+
+        <label>Previous Experience</label>
+        <textarea id="experience" placeholder="List past productions, venues, or tours..."></textarea>
+
+        <label>Education / Training</label>
+        <textarea id="education"></textarea>
+
+        <button type="submit">Generate Profile</button>
+    </form>
+
+    <div id="resumeOutput"></div>
+</section>
