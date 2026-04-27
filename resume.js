@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const data = {
+    const profile = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
@@ -21,34 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
       education: document.getElementById("education").value
     };
 
+    // SAVE TO LOCAL STORAGE
+    localStorage.setItem("stageLinkProfile", JSON.stringify(profile));
+
+    // SHOW PREVIEW
     output.innerHTML = `
       <div class="resume-card">
-
-        <h2>${data.name}</h2>
-        <p><strong>${data.role}</strong> • ${data.location}</p>
-
-        <hr>
-
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <p><strong>Experience:</strong> ${data.experienceYears} years</p>
-        <p><strong>Genre:</strong> ${data.genre}</p>
-        <p><strong>Availability:</strong> ${data.availability}</p>
-
-        <hr>
-
-        <h3>Professional Summary</h3>
-        <p>${data.summary}</p>
-
-        <h3>Skills</h3>
-        <p>${data.skills}</p>
-
-        <h3>Experience</h3>
-        <p>${data.experience}</p>
-
-        <h3>Education</h3>
-        <p>${data.education}</p>
-
+        <h2>${profile.name}</h2>
+        <p>${profile.role} • ${profile.location}</p>
+        <p><strong>Profile saved successfully</strong></p>
       </div>
     `;
   });
