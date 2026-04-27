@@ -3,54 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StageLink | About Us</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>StageLink | About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-# StageLink 🎵
+<body>
 
-A professional networking platform for the music industry
+<header>
+    <nav aria-label="Main Navigation">
+        <h1>StageLink</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Build Profile</a></li>
+            <li><a href="myprofile.html">My Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-## Overview
-StageLink is a web-based platform designed to connect professionals in the music and live event industry. It provides a centralized space for musicians, tour managers, promoters, and crew members to showcase their experience, find job opportunities, and build professional relationships.
+<main>
 
-This project is being developed as part of a semester-long assignment, progressing from a basic prototype to a functional MVP.
+<section class="readme">
 
-## Purpose
-The music industry often relies on informal networks and word-of-mouth hiring, which can make it difficult for new or independent professionals to find opportunities. StageLink aims to solve this problem by offering a structured, accessible platform where users can:
+    <h1>StageLink 🎵</h1>
+    <p><strong>A professional networking platform for the music industry</strong></p>
 
-- Build a professional profile  
-- Connect with others in the industry  
-- Discover job and gig opportunities  
+    <hr>
 
-## Target Audience
-- Musicians (solo artists and bands)  
-- Tour managers  
-- Promoters and event organizers  
-- Audio engineers and production crew  
-- Other live event professionals  
+    <h2>Overview</h2>
+    <p>
+        StageLink is a web-based platform designed to connect professionals in the music and live event industry.
+        It provides a centralized space for musicians, tour managers, promoters, and crew members to showcase their
+        experience, find job opportunities, and build professional relationships.
+    </p>
 
-## Features
+    <p>
+        This project is being developed as part of a semester-long assignment, progressing from a basic prototype to a functional MVP.
+    </p>
 
-### Project 01 (Prototype)
-- User profile display (static content)  
-- Homepage with platform overview  
-- Featured profiles section  
-- Job listings section (static)  
-- Basic navigation  
+    <h2>Purpose</h2>
+    <p>
+        The music industry often relies on informal networks and word-of-mouth hiring, which can make it difficult
+        for new or independent professionals to find opportunities. StageLink aims to solve this problem by offering
+        a structured, accessible platform.
+    </p>
 
-### Project 02 (Planned MVP)
-- User authentication (login/signup)  
-- Dynamic job board  
-- Profile creation and editing  
-- Networking/connection system  
-- Messaging between users  
-- Advanced filtering (role, location, skills)  
+    <ul>
+        <li>Build a professional profile</li>
+        <li>Connect with others in the industry</li>
+        <li>Discover job and gig opportunities</li>
+    </ul>
 
-## Technologies Used
-- HTML5 – structure and content  
-- CSS3 – styling and layout  
-- JavaScript – interactivity (planned expansion)  
-- GitHub Pages – hosting and deployment  
-- VS Code – development environment  
+    <h2>Target Audience</h2>
+    <ul>
+        <li>Musicians (solo artists and bands)</li>
+        <li>Tour managers</li>
+        <li>Promoters and event organizers</li>
+        <li>Audio engineers and production crew</li>
+        <li>Live event professionals</li>
+    </ul>
 
-## Project Structure
+    <h2>Features</h2>
+
+    <h3>Project 01 (Prototype)</h3>
+    <ul>
+        <li>User profile display (static content)</li>
+        <li>Homepage overview</li>
+        <li>Featured profiles section</li>
+        <li>Job listings section</li>
+        <li>Basic navigation</li>
+    </ul>
+
+    <h3>Project 02 (Planned MVP)</h3>
+    <ul>
+        <li>User authentication (login/signup)</li>
+        <li>Dynamic job board</li>
+        <li>Profile creation and editing</li>
+        <li>Networking system</li>
+        <li>Messaging between users</li>
+        <li>Advanced filtering (role, location, skills)</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>HTML5 – structure and content</li>
+        <li>CSS3 – styling and layout</li>
+        <li>JavaScript – interactivity</li>
+        <li>GitHub Pages – hosting</li>
+        <li>VS Code – development</li>
+    </ul>
+
+</section>
+
+</main>
+
+</body>
+</html>
