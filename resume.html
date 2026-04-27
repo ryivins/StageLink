@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageLink | Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>StageLink</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#jobs">Jobs</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="resumeBuilder">
+        <h2>Create Your StageLink Profile</h2>
+        <p>Build your professional music industry resume.</p>
+
+        <form id="resumeForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+
+            <label>Primary Role</label>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="Stage Manager">Stage Manager</option>
+                <option value="Audio Engineer">Audio Engineer</option>
+                <option value="Lighting Designer">Lighting Designer</option>
+                <option value="Performer">Performer</option>
+            </select>
+
+            <label>Genre</label>
+            <select id="genre" required>
+                <option value="">Select Genre</option>
+                <option value="Musical">Musical</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedy">Comedy</option>
+            </select>
+
+            <label>Experience</label>
+            <textarea id="experience" required></textarea>
+
+            <button type="submit">Generate Profile</button>
+
+        </form>
+
+        <div id="resumeOutput"></div>
+    </section>
+
+</main>
+
+<script src="resume.js"></script>
+
+</body>
+</html>

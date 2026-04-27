@@ -17,6 +17,8 @@
                 <li><a href="#profiles">Profiles</a></li>
                 <li><a href="#jobs">Jobs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                
+</button>
             </ul>
         </nav>
     </header>
@@ -30,17 +32,17 @@
                 StageLink is a professional network for musicians, tour managers, 
                 promoters, and live event crews.
             </p>
-            <button onclick="location.href='#cta'">Join the Network</button>
+            <button onclick="window.location.href='resume.html'">
+    Join the Network
+</button>
         </section>
 
         <!-- ABOUT SECTION -->
         <section id="about">
             <h2>What is StageLink?</h2>
             <p>
-                StageLink is a platform designed to help music industry professionals 
-                connect, collaborate, and find opportunities. Whether you're booking 
-                shows, building a tour, or looking for your next gig, StageLink helps 
-                you find the right people.
+                StageLink helps music industry professionals connect, collaborate, 
+                and find job opportunities in one place.
             </p>
         </section>
 
@@ -59,22 +61,33 @@
                 <p>Audio Engineer</p>
                 <p>Specializes in live sound and festivals</p>
             </div>
-
         </section>
 
         <!-- JOBS SECTION -->
         <section id="jobs">
             <h2>Open Opportunities</h2>
 
-            <div class="job-card">
-                <h3>Looking for Tour Manager</h3>
-                <p>Indie band seeking experienced TM for summer tour.</p>
+            <!-- FILTERS -->
+            <div class="filters">
+                <label for="genreFilter">Filter by Genre:</label>
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                    <option value="Musical">Musical</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Comedy">Comedy</option>
+                </select>
+
+                <label for="roleFilter">Filter by Role:</label>
+                <select id="roleFilter">
+                    <option value="">All Roles</option>
+                    <option value="Stage Manager">Stage Manager</option>
+                    <option value="Crew">Crew</option>
+                    <option value="Performer">Performer</option>
+                </select>
             </div>
 
-            <div class="job-card">
-                <h3>Live Sound Engineer Needed</h3>
-                <p>Venue hiring part-time audio engineer.</p>
-            </div>
+            <!-- JOB RESULTS (JS WILL FILL THIS) -->
+            <div id="jobResults"></div>
 
         </section>
 
@@ -90,6 +103,9 @@
     <footer>
         <p>© 2026 StageLink</p>
     </footer>
+
+    <!-- LINK YOUR JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
