@@ -1,15 +1,31 @@
-<    <header>
-        <link rel="stylesheet" href="style.css">
-        <nav aria-label="Main Navigation">
-            <h1>StageLink</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#jobs">Jobs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="myprofile.html">My Profile</a></li>
-section id="resumeBuilder">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StageLink | Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Main Navigation">
+        <h1>StageLink</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#jobs">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="myprofile.html">My Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section id="resumeBuilder">
     <h2>Create Your Professional Profile</h2>
-    <p>Build your StageLink resume </p>
+    <p>Build your StageLink resume</p>
 
     <form id="resumeForm">
 
@@ -46,12 +62,17 @@ section id="resumeBuilder">
         <label>Industry Focus (Genre)</label>
         <select id="genre" required>
             <option value="">Select Genre</option>
-            <option>Musical</option>
-            <option>Drama</option>
-            <option>Comedy</option>
+            <option>Jazz</option>
             <option>Rock</option>
-            <option>Pop</option>
+            <option>Rap</option>
+            <option>Metal</option>
+            <option>R&B</option>
             <option>EDM</option>
+            <option>Country</option>
+            <option>Latin</option>
+            <option>Pop</option>
+            <option>All Genres</option>
+                
         </select>
 
         <label>Work Availability</label>
@@ -81,3 +102,10 @@ section id="resumeBuilder">
 
     <div id="resumeOutput"></div>
 </section>
+
+</main>
+
+<script src="resume.js"></script>
+
+</body>
+</html>
