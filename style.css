@@ -22,19 +22,18 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-/* Links */
+/* Links & Buttons (shared behavior) */
 a {
     text-decoration: none;
     transition: 0.2s ease;
 }
 
-/* Buttons */
 button {
-    padding: 0.75rem 1.2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 5px;
     transition: 0.2s ease;
 }
 
@@ -53,6 +52,7 @@ nav {
     align-items: center;
 }
 
+/* Navigation list */
 nav ul {
     list-style: none;
     display: flex;
@@ -65,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #1b8bb8;
+    color: #1db954;
 }
 
 /* =========================
@@ -74,7 +74,7 @@ nav a:hover {
 #hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(to right, #1b8bb8, #191414);
+    background: linear-gradient(to right, #1db954, #191414);
     color: white;
 }
 
@@ -103,97 +103,35 @@ section {
 }
 
 section h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 /* =========================
-   FILTER BAR (IMPROVED UI)
-========================= */
-.filter-bar {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.filter-bar button {
-    background: #111;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.filter-bar button:hover {
-    background: #1b8bb8;
-    transform: scale(1.05);
-}
-
-/* =========================
-   SEARCH INPUT
-========================= */
-#profiles input {
-    display: block;
-    margin: 10px auto 20px auto;
-    padding: 10px;
-    width: 60%;
-    max-width: 400px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-#profiles input:focus {
-    border-color: #1b8bb8;
-    box-shadow: 0 0 5px rgba(27, 139, 184, 0.3);
-}
-
-/* =========================
-   PROFILE GRID
-========================= */
-.item-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* =========================
-   CARDS (ENHANCED INTERACTION)
+   CARDS (Profiles & Jobs)
 ========================= */
 .profile-card,
 .job-card {
     background: white;
     padding: 1.5rem;
+    margin: 1rem 0;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.25s ease;
-    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/* hover lift */
 .profile-card:hover,
 .job-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
-/* IMPORTANT for filtering */
-.item {
-    transition: all 0.3s ease;
-}
-
-/* hidden animation support */
-.item[style*="display: none"] {
-    opacity: 0;
-    transform: scale(0.95);
+.profile-card h3,
+.job-card h3 {
+    margin-bottom: 0.5rem;
 }
 
 /* =========================
-   CTA SECTION
+   CALL TO ACTION (CTA)
 ========================= */
 #cta {
     text-align: center;
@@ -205,30 +143,79 @@ section h2 {
 
 #cta button {
     margin-top: 1rem;
-    background: #1b8bb8;
+    background: #1db954;
     color: white;
 }
 
 #cta button:hover {
-    background: #1680a8;
+    background: #17a44a;
 }
 
 /* =========================
-   FOOTER
+   CONTACT FORM (NEW)
 ========================= */
-footer {
-    text-align: center;
-    padding: 2rem;
+#contact {
+    padding: 3rem 2rem;
     background: #222;
     color: white;
-    margin-top: 2rem;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+}
+
+/* Form layout */
+#contact form {
+    max-width: 500px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+#contact input,
+#contact select,
+#contact textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Button */
+#contact button {
+    background: #1db954;
+    color: white;
+}
+
+#contact button:hover {
+    background: #17a44a;
+}
+
+/* Confirmation message */
+#confirmationMessage {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #1db954;
+}
+
+/* =========================
+   FOOTER (GENERAL TEXT)
+========================= */
+footer p {
+    margin-top: 1rem;
 }
 
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
         gap: 1rem;
@@ -243,7 +230,7 @@ footer {
         font-size: 2rem;
     }
 
-    #profiles input {
-        width: 90%;
+    section {
+        padding: 2rem 1rem;
     }
 }

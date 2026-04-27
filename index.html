@@ -4,140 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StageLink | Music Industry Networking</title>
-
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<header>
-    <nav aria-label="Main Navigation">
-        <h1>StageLink</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#profiles">Profiles</a></li>
-            <li><a href="#jobs">Jobs</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- NAVBAR -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <h1>StageLink</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-<!-- HERO -->
-<section id="hero">
-    <h2>Connect with the Music Industry</h2>
-    <p>
-        StageLink is a professional network for musicians, tour managers,
-        promoters, and live event crews.
-    </p>
-    <button onclick="location.href='#cta'">Join the Network</button>
-</section>
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <h2>Connect with the Music Industry</h2>
+            <p>
+                StageLink is a professional network for musicians, tour managers, 
+                promoters, and live event crews.
+            </p>
+            <button onclick="location.href='#cta'">Join the Network</button>
+        </section>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>What is StageLink?</h2>
-    <p>
-        StageLink is a platform designed to help music industry professionals
-        connect, collaborate, and find opportunities.
-    </p>
-</section>
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <h2>What is StageLink?</h2>
+            <p>
+                StageLink is a platform designed to help music industry professionals 
+                connect, collaborate, and find opportunities. Whether you're booking 
+                shows, building a tour, or looking for your next gig, StageLink helps 
+                you find the right people.
+            </p>
+        </section>
 
-<!-- =========================
-     PROFILES + FILTER SYSTEM
-========================= -->
-<section id="profiles">
+        <!-- FEATURED PROFILES -->
+        <section id="profiles">
+            <h2>Featured Professionals</h2>
 
-    <h2>Featured Professionals</h2>
+            <div class="profile-card">
+                <h3>Alex Rivera</h3>
+                <p>Tour Manager</p>
+                <p>5+ years managing Heavy Metal tours</p>
+            </div>
 
-    <!-- FILTER BUTTONS -->
-    <div class="filter-bar">
-        <button onclick="filterItems('all')">All</button>
-        <button onclick="filterItems('tour')">Tour Managers</button>
-        <button onclick="filterItems('audio')">Audio Engineers</button>
-        <button onclick="filterItems('artist')">Artists</button>
-        <button onclick="filterItems('venue')">Venues</button>
-        <button onclick="filterItems('lighting')">Lighting Techs</button>
-        <button onclick="filterItems('label')">Record Labels</button>
-    </div>
+            <div class="profile-card">
+                <h3>Jordan Lee</h3>
+                <p>Audio Engineer</p>
+                <p>Specializes in live sound and festivals</p>
+            </div>
 
-    <!-- SEARCH -->
-    <input
-        type="text"
-        placeholder="Search professionals..."
-        onkeyup="searchItems(this.value)"
-    />
+        </section>
 
-    <!-- PROFILES -->
-    <div class="item-list">
+        <!-- JOBS SECTION -->
+        <section id="jobs">
+            <h2>Open Opportunities</h2>
 
-        <div class="item profile-card"
-             data-category="tour"
-             onclick="openProfile('alex')">
-            <h3>Alex Rivera</h3>
-            <p>Tour Manager</p>
-            <p>5+ years managing national indie tours</p>
-        </div>
+            <div class="job-card">
+                <h3>Looking for Tour Manager</h3>
+                <p>Indie band seeking experienced TM for summer tour.</p>
+            </div>
 
-        <div class="item profile-card"
-             data-category="audio"
-             onclick="openProfile('jordan')">
-            <h3>Jordan Lee</h3>
-            <p>Audio Engineer</p>
-            <p>Specializes in live sound and festivals</p>
-        </div>
+            <div class="job-card">
+                <h3>Live Sound Engineer Needed</h3>
+                <p>Venue hiring part-time audio engineer.</p>
+            </div>
 
-        <div class="item profile-card"
-             data-category="artist"
-             onclick="openProfile('luna')">
-            <h3>Luna Vex</h3>
-            <p>Indie Artist</p>
-            <p>Electronic / Alternative performer</p>
-        </div>
+        </section>
 
-    </div>
+        <!-- CALL TO ACTION -->
+        <section id="cta">
+            <h2>Ready to get started?</h2>
+            <button>Create Your Profile</button>
+        </section>
 
-</section>
+    </main>
 
-<!-- JOBS -->
-<section id="jobs">
-    <h2>Open Opportunities</h2>
+    <!-- CONTACT -->
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below and we’ll get back to you shortly.</p>
 
-    <div class="job-card">
-        <h3>Looking for Tour Manager</h3>
-        <p>Indie band seeking experienced TM for summer tour.</p>
-    </div>
+        <form id="contactForm">
+            
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-    <div class="job-card">
-        <h3>Live Sound Engineer Needed</h3>
-        <p>Venue hiring part-time audio engineer.</p>
-    </div>
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
 
-</section>
+            <label>Reason for Contact:</label>
+            <select name="reason" required>
+                <option value="">Select one</option>
+                <option value="booking">Booking Inquiry</option>
+                <option value="jobs">Job Opportunity</option>
+                <option value="general">General Question</option>
+            </select>
 
-<!-- CTA -->
-<section id="cta">
-    <h2>Ready to get started?</h2>
-    <button>Create Your Profile</button>
-</section>
+            <label>Message:</label>
+            <textarea name="message" rows="4" required></textarea>
 
-</main>
+            <button type="submit">Submit</button>
+        </form>
 
-<!-- FOOTER -->
-<footer id="contact">
-    <p>© 2026 StageLink</p>
-    <p>Contact: info@stagelink.com</p>
-</footer>
+        <p id="confirmationMessage" style="display:none;">
+            Thank you! We will get back to you shortly.
+        </p>
 
-<!-- PROFILE MODAL -->
-<div id="profileModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeProfile()">×</span>
-        <div id="profileDetails"></div>
-    </div>
-</div>
+        <p>© 2026 StageLink</p>
+    </footer>
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="script.js"></script>
 
 </body>
 </html>
