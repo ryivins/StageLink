@@ -147,27 +147,28 @@ nav a:hover {
    CTA CARD (BOTTOM SECTION)
 ========================= */
 
-.card bottom-cta {
+.card.bottom-cta {
     width: 100%;
     max-width: 1100px;
 
     padding: 3rem;
 
     background: var(--dark);
-    color: rgb(2, 2, 2);
+    color: white;
 
     border-radius: 12px;
 
     text-align: center;
 }
 
-/* Ensure text stays white */
-.card bottom-cta h2,
-.card bottom-cta p {
-    color: var(--dark);
+/* text inside CTA */
+.card.bottom-cta h2,
+.card.bottom-cta p {
+    color: white;
 }
 
-.card bottom-cta .cta-btn {
+/* CTA BUTTON */
+.card.bottom-cta .cta-btn {
     display: inline-block;
 
     background: var(--primary);
@@ -188,6 +189,10 @@ nav a:hover {
     margin-top: 1.5rem;
 }
 
+.card.bottom-cta .cta-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
 /* =========================
    FORMS
 ========================= */
