@@ -115,8 +115,16 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-.index-section-hero p {
+.index-section-hero h3{
     max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+}
+
+.index-section-hero p {
+    max-width: 1200px;
     margin: auto;
     font-size: 1.1rem;
     margin-bottom: 2rem;
