@@ -1,16 +1,109 @@
 /* =========================
-   HERO (HOME PAGE)
+   BASE RESET
 ========================= */
 
-#hero {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+:root {
+    --primary: #1db954;
+    --primary-dark: #17a44a;
+    --dark: #111;
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #333;
+    --muted: #666;
+    --border: #e6e6e6;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* MAIN LAYOUT */
+main {
     width: 100%;
     max-width: 1100px;
+    margin: auto;
+
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Home page override */
+.home main {
+    max-width: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background: var(--dark);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+//* =========================
+   JOB HERO (GREEN → BLACK)
+========================= */
+
+.jobs-hero {
+    width: 100%;
+    max-width: 1200px;
 
     text-align: center;
 
     padding: 6rem 2rem;
 
-    background: linear-gradient(135deg, var(--primary), #0f3d25);
+    /* CLEAN GRADIENT (NO IMAGE) */
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--dark)
+    );
+
     color: white;
 
     border-radius: 16px;
@@ -18,35 +111,42 @@
     margin: 2rem auto;
 }
 
-#hero h2 {
+/* HERO TEXT */
+.hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-#hero p {
+.hero-content p {
     max-width: 700px;
     margin: auto;
+    color: rgba(255,255,255,0.85);
 }
 
-#hero button {
+/* BUTTON (if you have one in hero) */
+.hero-btn {
+    display: inline-block;
+
     margin-top: 1.5rem;
     padding: 0.9rem 1.8rem;
-
-    border: none;
-    border-radius: 8px;
 
     background: white;
     color: var(--dark);
 
-    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.2s ease;
 }
 
-#hero button:hover {
+.hero-btn:hover {
     background: #eaeaea;
+    transform: translateY(-2px);
 }
 
 /* =========================
-   CTA SECTION (BOTTOM CARD)
+   CTA CARD (BOTTOM)
 ========================= */
 
 .bottom-cta {
@@ -61,8 +161,6 @@
     border-radius: 12px;
 
     text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .bottom-cta h2,
@@ -128,7 +226,7 @@
 }
 
 /* =========================
-   HOME PAGE OVERRIDE
+   HOME PAGE WIDER CARDS
 ========================= */
 
 .home .card,
@@ -136,6 +234,7 @@
 .home .job-card {
     max-width: 1100px;
 }
+
 /* =========================
    FORMS
 ========================= */
