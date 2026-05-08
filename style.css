@@ -115,6 +115,15 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
+.cards-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+
 .index-hero p {
     max-width: 700px;
     margin: auto;
@@ -264,7 +273,7 @@ section {
 /* =========================
    RESUME BUILDER FORM
 ========================= */
-form {
+.resume.form {
     background: var(--card);
     padding: 2rem;
     border-radius: 12px;
@@ -274,7 +283,7 @@ form {
     margin: 0 auto;
 }
 
-label {
+.resume.form label {
     display: block;
     margin-top: 12px;
     font-weight: bold;
