@@ -751,27 +751,33 @@ main {
 }
 /* =========================
    ABOUT + REFLECTION PAGES
-   (Documentation Style UI)
+   (Upgraded Documentation UI)
 ========================= */
 
+/* HERO */
 .doc-hero {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 3.5rem 2rem;
     margin-bottom: 2rem;
+
+    background: linear-gradient(135deg, var(--primary), #0f3d25);
+    color: white;
+
+    border-radius: 16px;
 }
 
 .doc-hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
 .doc-hero p {
     max-width: 750px;
     margin: auto;
-    color: var(--muted);
+    color: rgba(255,255,255,0.85);
 }
 
-/* Makes long text easier to read */
+/* BASE CARD */
 .doc-card {
     background: var(--card);
     padding: 2rem;
@@ -783,11 +789,23 @@ main {
     margin-bottom: 1.5rem;
 
     line-height: 1.8;
+
+    transition: 0.2s ease;
 }
 
-/* Better headings inside docs */
+/* Hover effect (makes it feel interactive) */
+.doc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* HEADINGS */
 .doc-card h2 {
     margin-bottom: 1rem;
+
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
 }
 
 .doc-card h3 {
@@ -795,11 +813,20 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Clean lists */
+/* LISTS */
 .doc-card ul {
     margin-left: 1.5rem;
 }
 
 .doc-card li {
     margin-bottom: 0.5rem;
+}
+
+/* OPTIONAL: subtle section variation */
+.doc-card:nth-child(even) {
+    background: #ffffff;
+}
+
+.doc-card:nth-child(odd) {
+    background: #fafafa;
 }
