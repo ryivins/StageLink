@@ -117,7 +117,7 @@ nav a:hover {
 }
 
 #hero p {
-    max-width: 700px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -128,7 +128,7 @@ nav a:hover {
     border: none;
     border-radius: 8px;
 
-    background: white;
+    background: static var(--primary);
     color: var(--dark);
 
     cursor: pointer;
