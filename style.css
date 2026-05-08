@@ -646,37 +646,52 @@ footer {
 }
 
 /* =========================
-   PROFILE EDIT MODE STYLING
-========================= */
-/* =========================
-   PROFILE PAGE LAYOUT (CENTERED + CLEAN)
+   GLOBAL PAGE LAYOUT SYSTEM
 ========================= */
 
-/* Page layout: centers all cards */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 2rem 1rem;
     gap: 1.5rem;
 }
 
-/* Shared card system (consistent width + look) */
-.card {
+/* =========================
+   UNIFIED CARD SYSTEM
+========================= */
+
+.card,
+.doc-card,
+.profile-card,
+.job-card {
     width: 100%;
     max-width: 750px;
 
     background: var(--card);
+
     padding: 2rem;
 
     border-radius: 12px;
     border: 1px solid var(--border);
 
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    transition: 0.2s ease;
+}
+
+/* Hover effect for ALL cards */
+.card:hover,
+.doc-card:hover,
+.profile-card:hover,
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* =========================
-   PROFILE HEADER
+   PROFILE STYLES
 ========================= */
 
 .profile-header {
@@ -688,7 +703,6 @@ main {
     text-align: left;
 }
 
-/* Avatar styling */
 .avatar {
     width: 140px;
     height: 140px;
@@ -704,11 +718,6 @@ main {
     font-size: 2.5rem;
 }
 
-/* Name + role styling */
-.profile-info h2 {
-    margin-bottom: 0.3rem;
-}
-
 .role {
     color: var(--primary);
     font-weight: bold;
@@ -718,10 +727,7 @@ main {
     color: var(--muted);
 }
 
-/* =========================
-   EDIT BUTTON
-========================= */
-
+/* Edit button */
 #editBtn {
     margin-top: 1rem;
 
@@ -743,22 +749,16 @@ main {
 }
 
 /* =========================
-   EDITABLE ELEMENTS
+   DOCUMENTATION HERO
 ========================= */
 
-.editable {
-    transition: 0.2s ease;
-}
-/* =========================
-   ABOUT + REFLECTION PAGES
-   (Upgraded Documentation UI)
-========================= */
-
-/* HERO */
 .doc-hero {
+    width: 100%;
+    max-width: 900px;
+
     text-align: center;
+
     padding: 3.5rem 2rem;
-    margin-bottom: 2rem;
 
     background: linear-gradient(135deg, var(--primary), #0f3d25);
     color: white;
@@ -774,32 +774,14 @@ main {
 .doc-hero p {
     max-width: 750px;
     margin: auto;
+
     color: rgba(255,255,255,0.85);
 }
 
-/* BASE CARD */
-.doc-card {
-    background: var(--card);
-    padding: 2rem;
-    border-radius: 12px;
+/* =========================
+   DOCUMENTATION CARD TEXT
+========================= */
 
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    border: 1px solid var(--border);
-
-    margin-bottom: 1.5rem;
-
-    line-height: 1.8;
-
-    transition: 0.2s ease;
-}
-
-/* Hover effect (makes it feel interactive) */
-.doc-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* HEADINGS */
 .doc-card h2 {
     margin-bottom: 1rem;
 
@@ -813,7 +795,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* LISTS */
 .doc-card ul {
     margin-left: 1.5rem;
 }
@@ -822,11 +803,4 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* OPTIONAL: subtle section variation */
-.doc-card:nth-child(even) {
-    background: #ffffff;
-}
 
-.doc-card:nth-child(odd) {
-    background: #fafafa;
-}
