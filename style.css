@@ -9,7 +9,7 @@
 }
 
 /* =========================
-   VARIABLES
+   THEME VARIABLES
 ========================= */
 
 :root {
@@ -34,7 +34,10 @@ body {
     color: var(--text);
 }
 
-/* MAIN */
+/* =========================
+   MAIN LAYOUT SYSTEM
+========================= */
+
 main {
     width: 100%;
     max-width: 1100px;
@@ -43,12 +46,26 @@ main {
 
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 1.5rem;
+
+    align-items: stretch;
+}
+
+/* Home page keeps full width hero feel */
+.home main {
+    max-width: none;
+}
+
+/* Universal section width consistency */
+section {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 3rem 1rem;
 }
 
 /* =========================
-   NAVBAR (RESTORED COLORS)
+   NAVBAR
 ========================= */
 
 header {
@@ -61,6 +78,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 nav ul {
@@ -71,8 +89,9 @@ nav ul {
 
 nav a {
     color: white;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
 }
 
 nav a:hover {
@@ -80,28 +99,68 @@ nav a:hover {
 }
 
 /* =========================
-   HERO
+   HERO SECTIONS
 ========================= */
 
-.index-hero {
+.index-hero,
+.jobs-hero,
+.doc-hero {
     width: 100%;
     max-width: 1200px;
-    text-align: center;
-    padding: 6rem 2rem;
-
-    background: linear-gradient(135deg, var(--primary), var(--dark));
-    color: white;
-    border-radius: 16px;
 
     margin: 2rem auto;
+
+    text-align: center;
+
+    padding: 6rem 2rem;
+
+    border-radius: 16px;
+
+    color: white;
 }
 
-.index-hero h2 {
+/* Home Hero */
+.index-hero {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--dark)
+    );
+}
+
+/* Jobs Hero */
+.jobs-hero {
+    background:
+        linear-gradient(
+            rgba(155,155,155,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1600&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Documentation Hero */
+.doc-hero {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #0f3d25
+    );
+}
+
+/* Hero Text */
+.index-hero h2,
+.hero-content h2,
+.doc-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.index-hero p {
+.index-hero p,
+.hero-content p,
+.doc-hero p {
     max-width: 700px;
     margin: auto;
     color: rgba(255,255,255,0.85);
@@ -111,157 +170,422 @@ nav a:hover {
    BUTTONS
 ========================= */
 
-.hero-btn {
+.hero-btn,
+.cta-btn {
     display: inline-block;
+
     margin-top: 1.5rem;
+
     padding: 0.9rem 1.8rem;
 
-    background: white;
-    color: var(--dark);
-
     border-radius: 8px;
+
     font-weight: bold;
     text-decoration: none;
 
     transition: 0.2s ease;
 }
 
-.hero-btn:hover {
+/* White Button */
+.hero-btn,
+.cta-btn {
+    background: white;
+    color: var(--dark);
+}
+
+.hero-btn:hover,
+.cta-btn:hover {
     background: #eaeaea;
     transform: translateY(-2px);
 }
 
-/* =========================
-   CARDS GRID (RESTORED ORIGINAL LOOK)
-========================= */
+/* Green Button */
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
 
-.cards-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+.primary-btn:hover {
+    background: var(--primary-dark);
 }
 
 /* =========================
-   CARD SYSTEM (RESTORED COLORS)
+   UNIVERSAL CARD SYSTEM
 ========================= */
 
 .card,
 .job-card,
-.profile-card {
+.profile-card,
+.doc-card,
+.benefit-card,
+.content-card,
+.about-card,
+.reflection-card {
+    width: 100%;
+
     background: var(--card);
+
     padding: 2rem;
+
     border-radius: 12px;
+
     border: 1px solid var(--border);
+
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    transition: 0.2s ease;
+}
+
+.card:hover,
+.job-card:hover,
+.profile-card:hover,
+.doc-card:hover,
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* =========================
-   JOB TAGS (WERE MISSING)
+   GRID SYSTEM
+========================= */
+
+.cards-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    align-items: stretch;
+}
+
+/* Jobs Grid */
+.jobs-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 2rem;
+}
+
+/* Benefits Grid */
+.benefits-container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 2rem;
+
+    margin-top: 2rem;
+}
+
+/* =========================
+   JOB FILTERS
+========================= */
+
+.job-filters,
+.filters {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
+
+.filter-container {
+    display: flex;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.filter-container input,
+.filter-container select,
+.filter-container button {
+    width: 220px;
+}
+
+/* =========================
+   JOB CARD DETAILS
 ========================= */
 
 .job-tag {
     display: inline-block;
+
     background: var(--primary);
     color: white;
+
     padding: 0.3rem 0.8rem;
+
     border-radius: 20px;
+
     font-size: 0.8rem;
     font-weight: bold;
-}
 
-/* =========================
-   JOB TEXT COLORS (RESTORED)
-========================= */
+    margin-bottom: 1rem;
+}
 
 .company-name {
     color: var(--primary);
     font-weight: bold;
+    margin-bottom: 0.3rem;
 }
 
 .job-location {
     color: var(--muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.job-description {
+    margin-bottom: 1.5rem;
 }
 
 /* =========================
-   BENEFITS SECTION (RESTORED COLORS)
+   BENEFITS
 ========================= */
-
-.benefit-card {
-    background: var(--card);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
 
 .benefit-card h3 {
     color: var(--primary);
+    margin-bottom: 1rem;
 }
 
 /* =========================
-   CTA SECTION (RESTORED)
+   CTA SECTIONS
 ========================= */
 
-.cta-section {
-    background: linear-gradient(135deg, var(--primary), #0f3d25);
+.cta-section,
+#cta,
+.card.bottom-cta {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #0f3d25
+    );
+
     color: white;
+
     text-align: center;
+
     padding: 4rem 2rem;
+
     border-radius: 16px;
 }
 
-.cta-btn {
-    background: white;
-    color: var(--dark);
-    padding: 0.9rem 1.8rem;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
+.card.bottom-cta {
+    background: var(--dark);
+}
+
+.cta-section h2,
+#cta h2,
+.card.bottom-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
 }
 
 /* =========================
-   FORMS (RESTORED STYLE)
+   FORMS
 ========================= */
 
-form {
-    background: var(--card);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+form,
+.resume.form,
+#contact form {
+    width: 100%;
+
     max-width: 700px;
+
     margin: auto;
+
+    background: var(--card);
+
+    padding: 2rem;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   INPUTS
-========================= */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
 
 input,
 textarea,
 select {
     width: 100%;
+
     padding: 10px;
+
+    margin-top: 6px;
+
     border-radius: 8px;
+
     border: 1px solid var(--border);
+
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(29,185,84,0.15);
 }
 
 /* =========================
-   FOOTER (RESTORED MUTED STYLE)
+   PROFILE
+========================= */
+
+.profile-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2rem;
+
+    text-align: left;
+
+    padding: 3rem 2rem;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 2.5rem;
+}
+
+.role {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.location {
+    color: var(--muted);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin-top: 1rem;
+}
+
+.skill-tags span {
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    padding: 0.4rem 0.8rem;
+
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+
+    transition: 0.2s ease;
+}
+
+.skill-tags span:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   DOCUMENTATION
+========================= */
+
+.doc-card h2 {
+    margin-bottom: 1rem;
+
+    color: var(--primary);
+
+    border-left: 4px solid var(--primary);
+
+    padding-left: 10px;
+}
+
+.doc-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.doc-card ul {
+    margin-left: 1.5rem;
+}
+
+.doc-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#confirmationMessage {
+    margin-top: 1rem;
+
+    font-weight: bold;
+
+    color: var(--primary);
+
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
 ========================= */
 
 footer {
     text-align: center;
+
     padding: 2rem;
+
     color: var(--muted);
 }
 
 /* =========================
-   RESPONSIVE FIX (SAFE ONLY)
+   RESPONSIVE DESIGN
 ========================= */
 
 @media (max-width: 1024px) {
+
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -283,7 +607,42 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .index-hero h2 {
+    .jobs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-top {
+        flex-direction: column;
+    }
+
+    .index-hero h2,
+    .hero-content h2,
+    .doc-hero h1 {
         font-size: 2rem;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-container input,
+    .filter-container select,
+    .filter-container button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    section {
+        padding: 2rem 1rem;
     }
 }
