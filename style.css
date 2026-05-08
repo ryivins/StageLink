@@ -138,14 +138,25 @@ nav a:hover {
     background: #eaeaea;
 }
 
-/* Bottom card wider than others */
+/* Bottom CTA card (black feature section) */
 .bottom-cta {
     width: 100%;
     max-width: 1100px;
 
     padding: 3rem;
 
-    text-align: center; /* makes button + text align nicely */
+    background: var(--dark);   /* black background */
+    color: white;              /* white text */
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+/* Make sure headings + text are white */
+.bottom-cta h2,
+.bottom-cta p {
+    color: white;
 }
 
 /* Green CTA button */
@@ -166,6 +177,14 @@ nav a:hover {
     cursor: pointer;
 
     transition: 0.2s ease;
+
+    margin-top: 1.5rem;
+}
+
+/* Hover effect */
+.cta-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* Hover effect */
