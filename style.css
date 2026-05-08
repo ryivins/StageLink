@@ -37,13 +37,13 @@ body {
 /* MAIN WRAPPER */
 main {
     width: 100%;
-    max-width: 1100px;
+    max-width: auto;
     margin: auto;
 
     padding: 2rem 1rem;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
 }
