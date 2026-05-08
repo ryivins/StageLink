@@ -270,8 +270,8 @@ form {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     border: 1px solid var(--border);
-    max-width: 700px;
-    margin: auto;
+    max-width: flex;
+    margin: 0 auto;
 }
 
 label {
