@@ -1,4 +1,4 @@
-/*/* =========================
+/*=========================
    BASE RESET
 ========================= */
 
@@ -34,31 +34,23 @@ body {
     color: var(--text);
 }
 
-/* MAIN LAYOUT SYSTEM */
 main {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+    padding: 2rem 1rem;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: 2rem 1rem;
     gap: 1.5rem;
 }
 
-/* =========================
-   PAGE WIDTH SYSTEM
-========================= */
-
-/* Default pages (About, Reflection, Contact, etc.) */
-main {
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* Home page = full width layout */
+/* home override */
 .home main {
     max-width: none;
 }
-
 /* =========================
    NAVBAR
 ========================= */
@@ -137,34 +129,46 @@ nav a:hover {
 #hero button:hover {
     background: #eaeaea;
 }
-
-/* Bottom CTA card (black feature section) */
 .bottom-cta {
     width: 100%;
     max-width: 1100px;
 
     padding: 3rem;
 
-    background: var(--dark);   /* black background */
-    color: rgb(0, 0, 0);              /* white text */
+    background: var(--dark);
+    color: white;
 
     border-radius: 12px;
 
     text-align: center;
 }
 
-/* Make sure headings + text are white */
+/* Bottom CTA card */
+.bottom-cta {
+    width: 100%;
+    max-width: 1100px;
+
+    padding: 3rem;
+
+    background: var(--dark);
+    color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
 .bottom-cta h2,
 .bottom-cta p {
     color: white;
 }
 
-/* Green CTA button */
+/* CTA button */
 .cta-btn {
     display: inline-block;
 
     background: var(--primary);
-    color: var(--primary);
+    color: white;
 
     padding: 0.9rem 1.8rem;
 
@@ -181,13 +185,6 @@ nav a:hover {
     margin-top: 1.5rem;
 }
 
-/* Hover effect */
-.cta-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-/* Hover effect */
 .cta-btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
