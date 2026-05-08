@@ -121,6 +121,26 @@ nav a:hover {
     color: rgba(255,255,255,0.85);
 }
 
+.job-filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-container select {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+}
+
 /* =========================
    3-COLUMN GRID
 ========================= */
@@ -460,6 +480,7 @@ footer {
     margin-bottom: 2rem;
     color: #ddd;
 }
+
 
 .hero-btn {
     display: inline-block;
