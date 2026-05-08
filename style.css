@@ -180,12 +180,18 @@ nav a:hover {
 /* =========================
    CTA CARD (BOTTOM SECTION)
 ========================= */
-
 .card.bottom-cta {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+
+    display: block;
+
     background: #111;
-    
     color: white;
     text-align: center;
+
     padding: 4rem 2rem;
     border-radius: 16px;
     margin-bottom: 3rem;
@@ -199,7 +205,6 @@ nav a:hover {
 .card.bottom-cta p {
     margin-bottom: 2rem;
 }
-
 
 /* CTA BUTTON */
 .card.bottom-cta .cta-btn {
