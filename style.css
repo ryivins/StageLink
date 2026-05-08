@@ -248,38 +248,67 @@ select:focus {
 }
 
 /* =========================
-   CONTACT FORM
+   CONTACT PAGE (UPDATED SYSTEM)
 ========================= */
+
+/* Remove dark full-page block feel */
 #contact {
-    padding: 3rem 2rem;
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    border-radius: 12px;
+    padding: 0;
+    background: transparent;
+    color: var(--text);
 }
 
+/* Form becomes a card like Jobs page */
 #contact form {
-    max-width: 500px;
+    background: var(--card);
+    max-width: 700px;
     margin: auto;
+
     display: flex;
     flex-direction: column;
+
+    padding: 2rem;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
 }
 
+/* Labels */
+#contact label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Inputs */
 #contact input,
 #contact textarea,
 #contact select {
     margin-bottom: 12px;
     padding: 10px;
+
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--border);
+
+    font-size: 14px;
 }
 
+/* Focus effect (matches your global style) */
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(29,185,84,0.15);
+}
+
+/* Confirmation message */
 #confirmationMessage {
     margin-top: 1rem;
     font-weight: bold;
     color: var(--primary);
+    text-align: center;
 }
-
 /* =========================
    FOOTER
 ========================= */
