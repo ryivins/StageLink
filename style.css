@@ -586,11 +586,12 @@ footer {
 
 /* Profile header layout */
 .profile-header {
-    padding: 2rem;
+    padding: 6rem 2rem;
+    border-radius: 16px;
 }
 
 .profile-top {
-    display: flex;
+    display: inline-block;
     align-items: center;
     gap: 1.5rem;
 }
