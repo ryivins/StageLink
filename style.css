@@ -167,12 +167,11 @@ nav a:hover {
     color: white;
 }
 
-/* CTA BUTTON */
-.cta-btn {
+.bottom-cta .cta-btn {
     display: inline-block;
 
-    background: var(--primary);
-    color: white;
+    background: var(--primary) !important;
+    color: white !important;
 
     padding: 0.9rem 1.8rem;
 
@@ -188,13 +187,6 @@ nav a:hover {
 
     margin-top: 1.5rem;
 }
-
-.cta-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-
 
 /* =========================
    FORMS
