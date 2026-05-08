@@ -34,7 +34,7 @@ body {
     color: var(--text);
 }
 
-/* MAIN LAYOUT */
+/* MAIN WRAPPER */
 main {
     width: 100%;
     max-width: 1100px;
@@ -48,7 +48,7 @@ main {
     gap: 1.5rem;
 }
 
-/* Home page override */
+/* HOME PAGE FULL WIDTH */
 .home main {
     max-width: none;
 }
@@ -86,10 +86,10 @@ nav a:hover {
 }
 
 /* =========================
-   JOB HERO (GREEN → BLACK)
+   HOME HERO (INDEX PAGE)
 ========================= */
 
-.jobs-hero {
+.index-hero {
     width: 100%;
     max-width: 1200px;
 
@@ -97,7 +97,6 @@ nav a:hover {
 
     padding: 6rem 2rem;
 
-    /* CLEAN GRADIENT (NO IMAGE) */
     background: linear-gradient(
         135deg,
         var(--primary),
@@ -111,19 +110,18 @@ nav a:hover {
     margin: 2rem auto;
 }
 
-/* HERO TEXT */
-.hero-content h2 {
+.index-hero h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.hero-content p {
+.index-hero p {
     max-width: 700px;
     margin: auto;
     color: rgba(255,255,255,0.85);
 }
 
-/* BUTTON (if you have one in hero) */
+/* HERO BUTTON */
 .hero-btn {
     display: inline-block;
 
@@ -146,7 +144,7 @@ nav a:hover {
 }
 
 /* =========================
-   CTA CARD (BOTTOM)
+   CTA CARD (BOTTOM SECTION)
 ========================= */
 
 .bottom-cta {
@@ -196,7 +194,7 @@ nav a:hover {
 }
 
 /* =========================
-   UNIFIED CARD SYSTEM
+   UNIFIED CARDS
 ========================= */
 
 .card,
@@ -218,17 +216,13 @@ nav a:hover {
     transition: 0.2s ease;
 }
 
-/* Hover effect */
 .card:hover,
 .profile-card:hover,
 .job-card:hover {
     transform: translateY(-5px);
 }
 
-/* =========================
-   HOME PAGE WIDER CARDS
-========================= */
-
+/* Home page wider cards */
 .home .card,
 .home .profile-card,
 .home .job-card {
