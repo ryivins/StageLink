@@ -648,21 +648,51 @@ footer {
 /* =========================
    PROFILE EDIT MODE STYLING
 ========================= */
+/* =========================
+   PROFILE PAGE LAYOUT (CENTERED + CLEAN)
+========================= */
+
+/* Page layout: centers all cards */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+}
+
+/* Shared card system (consistent width + look) */
+.card {
+    width: 100%;
+    max-width: 750px;
+
+    background: var(--card);
+    padding: 2rem;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   PROFILE HEADER
+========================= */
 
 .profile-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
+
+    text-align: left;
 }
 
-.profile-info h2 {
-    margin-bottom: 0.3rem;
-}
-
+/* Avatar styling */
 .avatar {
-    width: 70px;
-    height: 70px;
+    width: 140px;
+    height: 140px;
+
     border-radius: 50%;
     background: var(--primary);
     color: white;
@@ -671,29 +701,54 @@ footer {
     align-items: center;
     justify-content: center;
 
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-/* Edit button */
+/* Name + role styling */
+.profile-info h2 {
+    margin-bottom: 0.3rem;
+}
+
+.role {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.location {
+    color: var(--muted);
+}
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
 #editBtn {
     margin-top: 1rem;
+
     background: var(--primary);
     color: white;
+
     border: none;
     padding: 0.6rem 1.2rem;
+
     border-radius: 8px;
     cursor: pointer;
+
+    transition: 0.2s ease;
 }
 
 #editBtn:hover {
     background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
-/* Editable highlight feel */
+/* =========================
+   EDITABLE ELEMENTS
+========================= */
+
 .editable {
     transition: 0.2s ease;
 }
-
 /* =========================
    ABOUT + REFLECTION PAGES
    (Documentation Style UI)
