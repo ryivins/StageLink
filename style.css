@@ -147,7 +147,7 @@ nav a:hover {
    CTA CARD (BOTTOM SECTION)
 ========================= */
 
-.bottom-cta {
+.card bottom-cta {
     width: 100%;
     max-width: 1100px;
 
@@ -162,12 +162,12 @@ nav a:hover {
 }
 
 /* Ensure text stays white */
-.bottom-cta h2,
-.bottom-cta p {
+.card bottom-cta h2,
+.card bottom-cta p {
     color: white;
 }
 
-.bottom-cta .cta-btn {
+.card bottom-cta .cta-btn {
     display: inline-block;
 
     background: var(--primary) !important;
