@@ -643,3 +643,107 @@ footer {
     color: white;
     transform: translateY(-2px);
 }
+
+/* =========================
+   PROFILE EDIT MODE STYLING
+========================= */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.profile-info h2 {
+    margin-bottom: 0.3rem;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+/* Edit button */
+#editBtn {
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#editBtn:hover {
+    background: var(--primary-dark);
+}
+
+/* Editable highlight feel */
+.editable {
+    transition: 0.2s ease;
+}
+
+/* =========================
+   ABOUT + REFLECTION PAGES
+   (Documentation Style UI)
+========================= */
+
+.doc-hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.doc-hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.doc-hero p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+}
+
+/* Makes long text easier to read */
+.doc-card {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+
+    margin-bottom: 1.5rem;
+
+    line-height: 1.8;
+}
+
+/* Better headings inside docs */
+.doc-card h2 {
+    margin-bottom: 1rem;
+}
+
+.doc-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Clean lists */
+.doc-card ul {
+    margin-left: 1.5rem;
+}
+
+.doc-card li {
+    margin-bottom: 0.5rem;
+}

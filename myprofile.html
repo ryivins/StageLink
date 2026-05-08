@@ -27,22 +27,26 @@
 
 <main>
 
-<section class="page-hero profile-hero">
+<section class="page-hero">
     <h1>My Profile</h1>
-    <p>Manage your StageLink presence and showcase your experience in live events.</p>
+    <p>Manage your StageLink profile and showcase your experience.</p>
 </section>
 
-<!-- PROFILE HEADER CARD -->
-<section class="card profile-header">
-    <div class="profile-top">
+<!-- PROFILE CARD -->
+<section class="card profile-card">
+
+    <div class="profile-header">
         <div class="avatar">👤</div>
 
-        <div>
-            <h2>Your Name</h2>
-            <p class="role">Audio / Lighting / Production</p>
-            <p class="location">📍 Chicago, IL</p>
+        <div class="profile-info">
+            <h2 contenteditable="false" class="editable">Your Name</h2>
+            <p contenteditable="false" class="editable role">Audio / Lighting / Production</p>
+            <p contenteditable="false" class="editable location">📍 Chicago, IL</p>
         </div>
     </div>
+
+    <button id="editBtn" onclick="toggleEdit()">Edit Profile</button>
+
 </section>
 
 <!-- SKILLS -->
@@ -50,24 +54,23 @@
     <h2>Skills</h2>
 
     <div class="skill-tags">
-        <span>Live Sound</span>
-        <span>Lighting Design</span>
-        <span>Stage Setup</span>
-        <span>Event Production</span>
-        <span>Audio Mixing</span>
+        <span contenteditable="false" class="editable">Live Sound</span>
+        <span contenteditable="false" class="editable">Lighting Design</span>
+        <span contenteditable="false" class="editable">Stage Setup</span>
+        <span contenteditable="false" class="editable">Audio Mixing</span>
     </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section class="card">
     <h2>Experience</h2>
-    <p>
-        Experience working on live events, concerts, and production setups.
-        Skilled in coordinating stage equipment and assisting technical teams.
+
+    <p contenteditable="false" class="editable">
+        Worked on live concerts and event production, assisting with sound and lighting setups.
     </p>
 </section>
 
-<!-- ACTIVITY -->
+<!-- SAVED JOBS -->
 <section class="card">
     <h2>Saved Jobs</h2>
     <p>No saved jobs yet.</p>
@@ -76,3 +79,19 @@
 </section>
 
 </main>
+
+<script>
+function toggleEdit() {
+    const elements = document.querySelectorAll(".editable");
+    const btn = document.getElementById("editBtn");
+
+    const isEditing = btn.innerText === "Save Profile";
+
+    elements.forEach(el => {
+        el.contentEditable = !isEditing;
+        el.style.outline = !isEditing ? "2px solid #1db954" : "none";
+    });
+
+    btn.innerText = isEditing ? "Edit Profile" : "Save Profile";
+}
+</script>
