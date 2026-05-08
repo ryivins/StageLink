@@ -194,41 +194,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* =========================
-   UNIFIED CARD SYSTEM
-========================= */
 
-.card,
-.profile-card,
-.job-card,
-.resume-card {
-    width: 100%;
-    max-width: flex;
-
-    background: var(--card);
-
-    padding: 1.5rem;
-
-    border-radius: 12px;
-    border: 1px solid var(--border);
-
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-
-    transition: 0.2s ease;
-}
-
-.card:hover,
-.profile-card:hover,
-.job-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Home page wider cards */
-.home .card,
-.home .profile-card,
-.home .job-card {
-    max-width: 1100px;
-}
 
 /* =========================
    FORMS
