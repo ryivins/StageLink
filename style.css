@@ -203,7 +203,7 @@ nav a:hover {
 .job-card,
 .resume-card {
     width: 100%;
-    max-width: 750px;
+    max-width: flex;
 
     background: var(--card);
 
