@@ -1,57 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StageLink | Music Industry Networking</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="home">
-
-<!-- NAVBAR -->
-<header>
-    <nav aria-label="Main Navigation">
-        <h1>StageLink</h1>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="readme.html">About</a></li>
-            <li><a href="reflection.html">Reflection</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="myprofile.html">My Profile</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-<!-- HERO (MATCHES JOBS STYLE) -->
-<section class="index-hero">
-    <div class="hero-content">
-        <h2>StageLink</h2>
-        <p>Connect with professionals in the music and live event industry</p>
-
-        <a href="jobs.html" class="hero-btn">Join the Network</a>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="card">
-    <h2>What is StageLink?</h2>
-    <p>
-        StageLink helps music industry professionals connect, collaborate,
-        and find job opportunities in one place.
-    </p>
-</section>
-
-<!-- FEATURED PROFILES -->
 <section class="index-section">
 
     <h2>Featured Professionals</h2>
 
-    <div class="jobs-container">
+    <div class="cards-grid">
 
         <div class="profile-card">
             <h3>Don Rickles</h3>
@@ -90,69 +41,3 @@
 
     </div>
 </section>
-
-<!-- JOBS + FILTERS -->
-<section class="index-section">
-
-    <h2>Open Opportunities</h2>
-
-    <div class="card job-filters">
-
-        <div class="filter-container">
-
-            <select id="genreFilter">
-                <option value="">All Genres</option>
-                <option value="Jazz">Jazz</option>
-                <option value="Rock">Rock</option>
-                <option value="Rap">Rap</option>
-                <option value="Metal">Metal</option>
-                <option value="R&B">R&B</option>
-                <option value="Country">Country</option>
-                <option value="Latin">Latin</option>
-                <option value="EDM">EDM</option>
-                <option value="Pop">Pop</option>
-            </select>
-
-            <select id="roleFilter">
-                <option value="">All Roles</option>
-                <option value="Stage Manager">Stage Manager</option>
-                <option value="Crew">Crew</option>
-                <option value="Performer">Performer</option>
-                <option value="Audio Engineer">Audio Engineer</option>
-                <option value="Writer">Writer</option>
-                <option value="Marketing Manager">Marketing Manager</option>
-                <option value="System Engineer">System Engineer</option>
-                <option value="Tour Manager">Tour Manager</option>
-                <option value="Booking Agent">Booking Agent</option>
-            </select>
-
-        </div>
-
-    </div>
-
-    <!-- JOB RESULTS -->
-    <div id="jobResults" class="jobs-container"></div>
-
-</section>
-
-<!-- CTA -->
-<section class="card bottom-cta">
-    <h2>Build your resume</h2>
-    <p>Start creating your professional profile now.</p>
-
-    <button class="cta-btn" onclick="window.location.href='resume.html'">
-        Build Resume
-    </button>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 StageLink</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
