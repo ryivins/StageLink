@@ -581,74 +581,65 @@ footer {
 }
 
 /* =========================
-   PROFILE PAGE ENHANCEMENTS
-   (Matches Jobs page system)
+   PROFILE REDESIGN (MODERN DASHBOARD)
 ========================= */
 
-/* Profile layout spacing tweaks */
-.profile-container {
-    display: grid;
-    gap: 2rem;
+/* Profile header layout */
+.profile-header {
+    padding: 2rem;
 }
 
-/* Profile header feel (optional if you later expand hero) */
-.profile-hero {
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-/* Profile sections use same card system but more structured */
-.profile-card h2 {
-    margin-bottom: 1rem;
-}
-
-/* Skills list styling */
-.profile-skills ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.profile-skills li {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    padding: 0.6rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-
-    transition: 0.2s ease;
-}
-
-.profile-skills li:hover {
-    transform: translateX(5px);
-    border-color: var(--primary);
-}
-
-/* Experience section readability */
-.profile-experience p {
-    line-height: 1.7;
-    color: var(--text);
-}
-
-/* Action buttons area */
-.profile-actions {
+.profile-top {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Avatar circle */
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: white;
+    font-size: 2rem;
+}
+
+/* Role + location */
+.role {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.location {
+    color: var(--muted);
+}
+
+/* Skill tags (modern UI upgrade) */
+.skill-tags {
+    display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
     margin-top: 1rem;
 }
 
-/* Make profile CTA buttons feel like Jobs buttons */
-.profile-actions a {
-    display: inline-block;
-    background: var(--primary);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-weight: bold;
+.skill-tags span {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+
+    font-size: 0.9rem;
     transition: 0.2s ease;
 }
 
-.profile-actions a:hover {
-    background: var(--primary-dark);
+.skill-tags span:hover {
+    background: var(--primary);
+    color: white;
     transform: translateY(-2px);
 }
