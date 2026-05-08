@@ -182,24 +182,24 @@ nav a:hover {
 ========================= */
 
 .card.bottom-cta {
-    width: 100%;
-    max-width: 1100px;
-
-    padding: 3rem;
-
-    background: var(--dark);
+    background: #111;
+    
     color: white;
-
-    border-radius: 12px;
-
     text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
 }
 
-/* text inside CTA */
-.card.bottom-cta h2,
-.card.bottom-cta p {
+.card.bottom-cta h2 {
     color: white;
+    margin-bottom: 1rem;
 }
+
+.card.bottom-cta p {
+    margin-bottom: 2rem;
+}
+
 
 /* CTA BUTTON */
 .card.bottom-cta .cta-btn {
